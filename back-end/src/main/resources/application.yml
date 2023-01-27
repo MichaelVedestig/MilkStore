@@ -1,0 +1,33 @@
+debug: true
+server:
+  port: 8080
+spring:
+  #
+  # add appropriate configuraton to load the database here
+  #
+  sql:
+    init:
+      platform: MySQL
+      mode: always
+
+  #
+  # Add standalone postgres datasource config here
+  #
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://sql11.freemysqlhosting.net:3306/sql11593304?useSSL=false&allowMultiQueries=true&serverTimezone=UTC
+    username: sql11593304
+    password: mbfuyFzvDD
+  #
+  # Add the appropriate JPA config here
+  #
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: ERROR
